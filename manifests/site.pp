@@ -44,12 +44,20 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
 
-file {'motd':
-  ensure => file,
-  path => '/etc/motd',
-  owner => 'root',
-  group => 'root',
-  mode => '0644',
-  content => 'managing state via puppet!\n',
+#file {'motd':
+#  ensure => file,
+#  path => '/etc/motd',
+#  owner => 'root',
+#  group => 'root',
+#  mode => '0644',
+#  content => 'managing state via puppet!\n',
+#  }
+
+exec { 'motd':
+  command => "cowsay 'Welcome to ${::fqdn}!' > /etc/mod",
+  # path => '/usr/bin:/usr/local/bin',
+  creates => '/etc/motd',
   }
+
 }
+
