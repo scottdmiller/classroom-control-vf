@@ -49,7 +49,7 @@ file {'/etc/motd':
   owner => 'root',
   group => 'root',
   mode => '0644',
-  content => 'managing state via puppet!\n",
+  content => 'managing state via puppet!\n',
   }
-  
+
 }
