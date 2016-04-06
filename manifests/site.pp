@@ -44,8 +44,11 @@ node 'scottdmiller.puppetlabs.vm' {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
 
+<<<<<<< HEAD
 include users
 include skeleton
 
+=======
+>>>>>>> 62e870d63c15bf0004632073842b517e77cdb19c
 }
 
