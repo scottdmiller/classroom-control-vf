@@ -9,7 +9,7 @@ class memcached{
      group => 'root',
      mode => '0644',
      source => 'puppet:///modules/memcached/memcached',
-     required => Package['memcached'],
+     require => Package['memcached'],
      }
      
     service {'memcached':
