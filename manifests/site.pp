@@ -38,13 +38,14 @@ ini_setting { 'random ordering':
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node default {
+node 'scottdmiller.puppetlabs.vm' {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
 
 include users
+include skeleton
 
 }
 
